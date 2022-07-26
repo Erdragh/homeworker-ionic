@@ -8,5 +8,24 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12">
+        <ion-grid class="chats">
+          <ion-row>
+            <ion-col *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9]" size="12" size-sm="6" size-xl="4">
+              <ion-card routerLink="tobias-wagner">
+                <ion-card-header>
+                  <ion-card-title>Tobias Wagner</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  Awesome content
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
