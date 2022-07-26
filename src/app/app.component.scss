@@ -9,8 +9,10 @@ ion-menu.md ion-content {
   --padding-bottom: 20px;
 }
 
-ion-menu ion-content {
-  max-width: 300px;
+@media screen and (min-width: 1500px) {
+  ion-menu {
+    max-width: 300px;
+  }
 }
 
 ion-menu.md ion-list {

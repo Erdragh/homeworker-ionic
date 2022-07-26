@@ -1,0 +1,16 @@
+<div class="message-wrapper ion-padding">
+  <div class="author" *ngIf="!sent && author">
+    <a (click)="onOpenAuthor()">{{ author }}</a>
+  </div>
+  <div class="message" [ngClass]="{'sent': sent}">
+    <div class="text ion-padding">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorum, eos voluptas sapiente culpa dolorem quo sint eum labore dolore?
+    </div>
+    <div class="options-button-wrapper" *ngIf="sent">
+      <ion-button class="options-button ion-no-padding" (click)="showActionSheet()" fill="clear">
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="info">12:12</div>
+  </div>
+</div>
