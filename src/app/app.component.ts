@@ -6,13 +6,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Dashboard', url: '/dashboard', icon: 'home' },
+    { title: 'Stundenplan', url: '/timetable', icon: 'time' },
+    { title: 'Chats', url: '/chats', icon: 'chatbubbles' },
+    { title: 'Hausaufgaben', url: '/homework', icon: 'checkbox' },
+    { title: 'Kalender', url: '/calendar', icon: 'calendar' },
+    { title: 'Unterrichtsinhalte', url: '/lessons', icon: 'book' },
+    { title: 'Neuigkeiten', url: '/news', icon: 'newspaper' },
+    { title: 'Dateien', url: '/files', icon: 'folder' },
+    { title: 'Noten', url: '/grades', icon: 'musical-notes' },
+    { title: 'Lerntagebuch', url: '/tracker', icon: 'stopwatch' },
+    { title: 'Aktivitäten', url: '/activities', icon: 'notifications' },
+    { title: 'Deine Klasse', url: '/group', icon: 'people' },
+    { title: 'Support', url: '/support', icon: 'help-buoy' },
+    { title: 'Einstellungen', url: '/settings', icon: 'settings' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
