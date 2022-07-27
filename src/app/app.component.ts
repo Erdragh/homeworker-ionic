@@ -22,4 +22,8 @@ export class AppComponent {
     { title: 'Einstellungen', url: '/settings', icon: 'settings' },
   ];
   constructor() {}
+
+  logout() {
+    console.log('log out');
+  }
 }

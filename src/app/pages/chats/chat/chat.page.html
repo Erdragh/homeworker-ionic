@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header #header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/chats"></ion-back-button>
@@ -7,12 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" class="messages">
-        <app-message *ngFor="let i of [1,2,3,4,5,6,7,8,9]" [sent]="i % 2 === 0" [id]="i"></app-message>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content style="height: 90vh; overflow: hidden">
+  <div class="inner-flex-container">
+    <div class="messages ion-padding" [ngStyle]="{'height': 'calc(100vh - ' + (headerHeight + chatBoxHeight) + 'px)'}">
+      <app-message *ngFor="let i of [1,2,3,4,5,6,7,8,9]" [sent]="i % 2 === 0" [id]="i"></app-message>
+    </div>
+    <div class="chatbox" #chatbox>
+      <div class="chatbox-flex-container ion-padding-horizontal">
+        <ion-textarea placeholder="Chat-Nachricht" enterkeyhint="send" [autofocus]="true" rows="4" class=""></ion-textarea>
+        <ion-button class="ion-margin-top">
+          <ion-icon slot="icon-only" name="send"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>

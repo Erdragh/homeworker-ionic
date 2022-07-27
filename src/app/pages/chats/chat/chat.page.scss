@@ -1,4 +1,36 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  ion-content {
+    flex: 1 1 auto;
+    overflow: hidden;
+    div.inner-flex-container {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 90vh;
+    }
+  }
+}
+
 .messages {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  height: 90vh;
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  background: var(--ion-color-light);
+  .chatbox-flex-container {
+    ion-textarea {
+      flex: 1 1 auto;
+    }
     display: flex;
-    flex-direction: column-reverse;
+  }
 }
